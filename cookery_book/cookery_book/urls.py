@@ -15,8 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from . import settings
+from django.contrib.staticfiles.urls import static
+
 
 urlpatterns = [
+    path('', include('users.urls')),
+    path('', include('recipes.urls')),
     path('admin/', admin.site.urls),
     path(r'^i18n/', include('django.conf.urls.i18n')),
 ]
+
+if settings.DEBUG:
+    # urlpatterns += staticfiles_urlpatterns()
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

@@ -7,3 +7,6 @@ venv/
 
 # SQLite3
 db.sqlite3
+
+# VS Code settings
+.vscode/

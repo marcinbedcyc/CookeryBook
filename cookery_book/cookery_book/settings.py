@@ -110,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en'
 LOCALE_PATHS = (
-    os.path.join(BASE_DIR, 'locale'), 
+    os.path.join(BASE_DIR, 'locale'),
 )
 LANGUAGES = (
     ('en', _('English')),
@@ -129,12 +129,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
-
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = 'users-test'
 LOGIN_URL = 'users-login'

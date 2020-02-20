@@ -1,22 +1,18 @@
-{% extends 'base.html' %}
+{% extends 'users/users_base.html' %}
+{% load static %}
 {% load i18n %}
-{% load crispy_forms_tags %}
 {% block content %}
-    <div class="content-section">
-    <form method="POST">
+    <form method="POST" class="form-signin">
         {% csrf_token %}
-        <fieldset class="form-group">
-            <legend class="border-bottom md-4">{% trans "Log In" %}</legend>
-            {{ form|crispy }}
-        </fieldset>
-        <div class="form-group">
-            <button class="btn btn-outline-info" type="submit">{% trans "Login" %}</button>
+        <img class="mb-4 logo" src="{% static 'users/img/logo.png' %}" alt="" width="128" height="128">
+        <h1 class="h2 mb-3 font-weight-bold text-uppercase">{% trans "Log In" %}</h1>
+        {{form.username}}
+        {{form.password}}        
+        <button class=" mt-3 btn btn-lg btn-primary btn-block" type="submit">{% trans "Login" %}</button>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                {% trans "Need An Account" %}<a class="ml-2" href={% url 'users-register' %}>{% trans "Sign In Now" %}</a>
+            </small>
         </div>
-        
     </form>
-    <div class="border-top pt-3">
-        <small class="text-muted">
-            {% trans "Need An Account" %}<a class="ml-2" href={% url 'users-register' %}>{% trans "Sign In Now" %}</a>
-        </small>
-    </div>
 {% endblock content %}

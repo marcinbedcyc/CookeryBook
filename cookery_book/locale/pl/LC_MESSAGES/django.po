@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-19 20:42+0100\n"
+"POT-Creation-Date: 2020-02-20 18:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,10 @@ msgstr ""
 "%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
 "%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
+#: templates/base.html:12 templates/users/users_base.html:12
+msgid "Cookery Book Online"
+msgstr "Przepisy Kulinarne Online"
+
 #: templates/users/activate_account.html:3
 msgid "Hi"
 msgstr "Cześć"
@@ -28,19 +32,19 @@ msgstr "Cześć"
 msgid "Please click on the link to confirm your registration,"
 msgstr "Proszę kliknąć w link aktywacyjny aby potwierdzić rejestrację"
 
-#: templates/users/login.html:9
+#: templates/users/login.html:8
 msgid "Log In"
 msgstr "Zaloguj"
 
-#: templates/users/login.html:13
+#: templates/users/login.html:11
 msgid "Login"
 msgstr "Zaloguj"
 
-#: templates/users/login.html:19
+#: templates/users/login.html:14
 msgid "Need An Account"
 msgstr "Potrzebujesz konta"
 
-#: templates/users/login.html:19
+#: templates/users/login.html:14
 msgid "Sign In Now"
 msgstr "Zarejestruj się teraz"
 
@@ -52,7 +56,7 @@ msgstr "Zostałeś wylogowany"
 msgid "Login in again?"
 msgstr "Zaloguj jeszcze raz?"
 
-#: templates/users/register.html:9
+#: templates/users/register.html:8
 msgid "Join Today"
 msgstr "Dołącz już dziś"
 
@@ -60,10 +64,14 @@ msgstr "Dołącz już dziś"
 msgid "Sign Up"
 msgstr "Zapisz się"
 
-#: templates/users/register.html:18
+#: templates/users/register.html:16
 msgid "Already have An Account"
 msgstr "Masz już konto"
 
-#: templates/users/register.html:18
+#: templates/users/register.html:16
 msgid "Sign In"
 msgstr "Zaloguj się"
+
+#: templates/users/users_base.html:40
+msgid "Choose Language: "
+msgstr "Wybierz język:"

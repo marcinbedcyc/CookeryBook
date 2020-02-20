@@ -52,7 +52,11 @@ def register(request):
             email.send()
             messages.success(request, _(
                 'Your account has been created. Confirm your account on email and login in!'))
-            return redirect('users-test')
+            return redirect('users-login')
+        else:
+            for field in form:
+                for error in field.errors:
+                    messages.add_message(request, messages.ERROR, error)
     else:
         form = UserRegisterForm()
     return render(request, 'users/register.html', {'form': form})

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+    <div class="row">
+        {% for recipe in recipes  %}
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="card d-flex box-shadow mb-4" >
+                <img src="{{recipe.main_image.url}}" class="card-img-top img-fluid" alt="...">
+                <div class="card-body">
+                    <strong class="d-inline-block mb-2">
+                        <a href="#">{{recipe.author}}</a>
+                    </strong>
+                    <h3 class="mb-0">
+                        <a class="text-dark" style='font-family: "Playfair Display", Georgia, "Times New Roman", serif;' href="#">{{recipe.title}}</a>
+                    </h3>
+                    <div class="mb-1 text-muted mb-3">{{ recipe.created_date|date:"d-m-Y H:i" }}</div>
+                    <p class="card-text">{{recipe.short_description}}</p>
+                    <a href="#" class="btn btn-primary">{% trans "Go to recipe" %}</a>
+                </div>
+            </div>
+        </div>     
+        {% endfor %}
+    </div>
+    {% if is_paginated %}
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                    <li class="page-item"><a class="page-link" href="?page=1">{% trans "First" %}</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+                {% endif %}
+                {% for num in page_obj.paginator.page_range %}
+                    {% if page_obj.number == num %}
+                        <li class="page-item active">
+                            <a class="page-link" href="?page={{ num }}">{{ num }}<span class="sr-only">(current)</span></a>
+                        </li>
+                    {% elif  num > page_obj.number|add:'-2' and num < page_obj.number|add:'2'%}
+                        <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if page_obj.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">{% trans "Last" %}</a></li>
+                {% endif %}
+          </ul>
+    {% endif %}
+{% endblock %}

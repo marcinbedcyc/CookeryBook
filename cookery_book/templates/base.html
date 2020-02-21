@@ -10,28 +10,72 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>{% trans "Cookery Book Online" %}</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'users/img/logo.png' %}"/>
+    <link rel="stylesheet" href="{% static 'cookery_book/css/base.css' %}">
 </head>
-<body>
-    <form action="{% url 'set_language' %}" method="post">
-        {% csrf_token %}
-            <input name="next" type="hidden" value="{{ redirect_to }}" />
+<body style="margin-top: 5rem;">
+<!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href={% url 'recipes-list' %}>
+          <img src="{% static 'users/img/logo.png' %}"  style="width: 50px; height: 50px;" alt="">
+          <italic style='font-size: 22px; font-family: "Playfair Display", Georgia, "Times New Roman", serif;'>{% trans "Cookery Book" %}</italic>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggle">
+          <div class="navbar-nav mr-auto">
+            <strong><a class="nav-item nav-link" href={% url 'recipes-list' %}>{% trans "Home" %}</a></strong>
+            <strong><a class="nav-item nav-link"  href={% url 'recipes-list' %}>{% trans "About" %}</a></strong>
+          </div>
+          <div class="navbar-nav">
+            {% if user.is_authenticated %}
+              <strong><a class="nav-item nav-link" href="#">{% trans "New Recipe" %}</a></strong>
+              <strong><a class="nav-item nav-link"  href="#">{% trans "Profile" %}</a></strong>
+              <strong><a class="nav-item nav-link"  href={% url 'users-logout' %}>{% trans "Logout" %}</a></strong>
+            {% else %}
+              <strong><a class="nav-item nav-link" href={% url 'users-login' %}>{% trans "Login" %}</a></strong>
+              <strong><a class="nav-item nav-link" href={% url 'users-register' %}>{% trans "Register" %}</a></strong>
+            {% endif %}
 
-            <select class="custom-select ml-3" name="language" style="width: auto;" onchange="this.form.submit()">
-                {% get_current_language as LANGUAGE_CODE %}
-                {% get_available_languages as LANGUAGES %}
-                {% get_language_info_list for LANGUAGES as languages %}
-                {% for language in languages %}
+            <form action="{% url 'set_language' %}" method="post">
+              {% csrf_token %}
+              <input name="next" type="hidden"  value="{{ redirect_to }}" />
+
+                <select class="custom-select ml-3" name="language" style="width: auto; font-size: 15px;" onchange="this.form.submit()">
+                  {% get_current_language as LANGUAGE_CODE %}
+                  {% get_available_languages as LANGUAGES %}
+                  {% get_language_info_list for LANGUAGES as languages %}
+                  {% for language in languages %}
                     <option
-                    value="{{ language.code }}"
-                    {% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}
-                    >
-                        {{ language.code }}
+                      value="{{ language.code }}"
+                      {% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}
+                      >
+                      {{ language.code }}
                     </option>
-                {% endfor %}
-            </select>
-    </form>
-
+                  {% endfor %}
+                  </select>
+            </form>
+          </div>
+        </div>
+    </nav> 
+    <!--End Navbar-->
+    
     <main role="main" class="container mb-5">
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+          <a class="p-2 text-muted" style='font-family: "Playfair Display", Georgia, "Times New Roman", serif;' href="#">{% trans "Soup" %}</a>
+          <a class="p-2 text-muted" href="#">{% trans "Dessert" %}</a>
+          <a class="p-2 text-muted" href="#">{% trans "Snack" %}</a>
+          <a class="p-2 text-muted" href="#">{% trans "Main Course" %}</a>
+          <a class="p-2 text-muted" href="#">{% trans "Appetizer" %}</a>
+          <a class="p-2 text-muted" href="#">{% trans "Drink" %}</a>
+          <a class="p-2 text-muted" href="#">{% trans "Breakfast" %}</a>
+          <a class="p-2 text-muted" href="#">{% trans "Preserves" %}</a>
+          <a class="p-2 text-muted" href="#">{% trans "Salads" %}</a>
+        </nav>
+      </div>
     <div class="row">
       <div class="col-md-12">
       {% if messages %}

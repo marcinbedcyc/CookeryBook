@@ -11,10 +11,6 @@ from .forms import UserRegisterForm
 from django.utils.translation import ugettext as _
 
 
-def test(request):
-    return render(request, template_name='base.html')
-
-
 def activate(request, uidb64, token):
     try:
         uid = force_bytes(urlsafe_base64_decode(uidb64))

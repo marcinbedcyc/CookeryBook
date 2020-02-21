@@ -20,7 +20,7 @@ class Recipe(models.Model):
         (SNACK, _('Snack')),
         (MAIN_COURSE, _('Main Course')),
         (APPETIZER, _('Appetizer')),
-        (DRINK, ('Drink')),
+        (DRINK, _('Drink')),
         (BREAKFAST, _('Breakfast')),
         (PRESERVES, _('Preserves')),
         (SALADS, _('Salads'))

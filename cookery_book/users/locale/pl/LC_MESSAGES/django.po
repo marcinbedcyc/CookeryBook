@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-20 18:07+0100\n"
+"POT-Creation-Date: 2020-02-21 15:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,19 +38,19 @@ msgstr "Hasło"
 msgid "Repeat Password"
 msgstr "Powtórz Hasło"
 
-#: views.py:28
+#: views.py:24
 msgid "Your account has been confirmed!"
 msgstr "Twoje konto zostało potwierdzone!"
 
-#: views.py:31
+#: views.py:27
 msgid "Activation link is invalid!"
 msgstr "Link aktywacyjny jest nieprawidłowy!"
 
-#: views.py:43
+#: views.py:39
 msgid "Activate Your Account"
 msgstr "Aktywuj swoje konto"
 
-#: views.py:54
+#: views.py:50
 msgid ""
 "Your account has been created. Confirm your account on email and login in!"
 msgstr ""

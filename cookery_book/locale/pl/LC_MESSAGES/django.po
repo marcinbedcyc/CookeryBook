@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-20 18:07+0100\n"
+"POT-Creation-Date: 2020-02-21 15:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,6 +24,88 @@ msgstr ""
 msgid "Cookery Book Online"
 msgstr "Przepisy Kulinarne Online"
 
+#: templates/base.html:22
+#, fuzzy
+#| msgid "Cookery Book Online"
+msgid "Cookery Book"
+msgstr "Przepisy Kulinarne Online"
+
+#: templates/base.html:29
+msgid "Home"
+msgstr "Strona Główna"
+
+#: templates/base.html:30
+msgid "About"
+msgstr "O nas"
+
+#: templates/base.html:34
+msgid "New Recipe"
+msgstr "Nowy Przepis"
+
+#: templates/base.html:35
+msgid "Profile"
+msgstr "Profil"
+
+#: templates/base.html:36
+msgid "Logout"
+msgstr "Wyloguj"
+
+#: templates/base.html:38 templates/users/login.html:11
+msgid "Login"
+msgstr "Zaloguj"
+
+#: templates/base.html:39
+msgid "Register"
+msgstr "Zarejestruj"
+
+#: templates/base.html:68
+msgid "Soup"
+msgstr "Zupa"
+
+#: templates/base.html:69
+msgid "Dessert"
+msgstr "Deser"
+
+#: templates/base.html:70
+msgid "Snack"
+msgstr "Przekąska"
+
+#: templates/base.html:71
+msgid "Main Course"
+msgstr "Danie Główne"
+
+#: templates/base.html:72
+msgid "Appetizer"
+msgstr "Przystawka"
+
+#: templates/base.html:73
+msgid "Drink"
+msgstr "Napój"
+
+#: templates/base.html:74
+msgid "Breakfast"
+msgstr "Śniadanie"
+
+#: templates/base.html:75
+msgid "Preserves"
+msgstr "Przetwory"
+
+#: templates/base.html:76
+msgid "Salads"
+msgstr "Sałatka"
+
+#: templates/recipes/recipes_list.html:18
+msgid "Go to recipe"
+msgstr "Do przepisu"
+
+#: templates/recipes/recipes_list.html:27
+msgid "First"
+msgstr "Pierwszy"
+
+#: templates/recipes/recipes_list.html:41
+msgid "Last"
+msgstr "Ostatni"
+
 #: templates/users/activate_account.html:3
 msgid "Hi"
 msgstr "Cześć"
@@ -34,10 +116,6 @@ msgstr "Proszę kliknąć w link aktywacyjny aby potwierdzić rejestrację"
 
 #: templates/users/login.html:8
 msgid "Log In"
-msgstr "Zaloguj"
-
-#: templates/users/login.html:11
-msgid "Login"
 msgstr "Zaloguj"
 
 #: templates/users/login.html:14

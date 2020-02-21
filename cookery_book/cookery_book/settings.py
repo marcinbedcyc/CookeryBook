@@ -137,7 +137,7 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = 'users-test'
+LOGIN_REDIRECT_URL = 'recipes-list'
 LOGIN_URL = 'users-login'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

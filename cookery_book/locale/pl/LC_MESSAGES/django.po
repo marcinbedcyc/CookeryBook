@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-21 15:31+0100\n"
+"POT-Creation-Date: 2020-02-22 11:35+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,51 +58,84 @@ msgstr "Zaloguj"
 msgid "Register"
 msgstr "Zarejestruj"
 
-#: templates/base.html:68
+#: templates/base.html:68 templates/recipes/recipe_detail.html:42
+#: templates/recipes/recipes_list.html:17
 msgid "Soup"
 msgstr "Zupa"
 
-#: templates/base.html:69
+#: templates/base.html:69 templates/recipes/recipe_detail.html:44
+#: templates/recipes/recipes_list.html:19
 msgid "Dessert"
 msgstr "Deser"
 
-#: templates/base.html:70
+#: templates/base.html:70 templates/recipes/recipe_detail.html:46
+#: templates/recipes/recipes_list.html:21
 msgid "Snack"
 msgstr "Przekąska"
 
-#: templates/base.html:71
+#: templates/base.html:71 templates/recipes/recipe_detail.html:48
+#: templates/recipes/recipes_list.html:23
 msgid "Main Course"
 msgstr "Danie Główne"
 
-#: templates/base.html:72
+#: templates/base.html:72 templates/recipes/recipe_detail.html:50
+#: templates/recipes/recipes_list.html:25
 msgid "Appetizer"
 msgstr "Przystawka"
 
-#: templates/base.html:73
+#: templates/base.html:73 templates/recipes/recipe_detail.html:52
+#: templates/recipes/recipes_list.html:27
 msgid "Drink"
 msgstr "Napój"
 
-#: templates/base.html:74
+#: templates/base.html:74 templates/recipes/recipe_detail.html:54
+#: templates/recipes/recipes_list.html:29
 msgid "Breakfast"
 msgstr "Śniadanie"
 
-#: templates/base.html:75
+#: templates/base.html:75 templates/recipes/recipe_detail.html:56
+#: templates/recipes/recipes_list.html:31
 msgid "Preserves"
 msgstr "Przetwory"
 
-#: templates/base.html:76
+#: templates/base.html:76 templates/recipes/recipe_detail.html:58
+#: templates/recipes/recipes_list.html:33
 msgid "Salads"
 msgstr "Sałatka"
 
-#: templates/recipes/recipes_list.html:18
+#: templates/recipes/recipe_detail.html:7
+msgid "Addded by"
+msgstr "Dodany przez"
+
+#: templates/recipes/recipe_detail.html:9
+msgid "on"
+msgstr "dnia"
+
+#: templates/recipes/recipe_detail.html:40
+msgid "Category"
+msgstr "Kategoria"
+
+#: templates/recipes/recipe_detail.html:62
+msgid "Short Description: "
+msgstr "Krótki opis"
+
+#: templates/recipes/recipe_detail.html:64
+msgid "Ingredients: "
+msgstr "Składniki"
+
+#: templates/recipes/recipe_detail.html:70
+msgid "Instructions: "
+msgstr "Instrukcje"
+
+#: templates/recipes/recipes_list.html:38
 msgid "Go to recipe"
 msgstr "Do przepisu"
 
-#: templates/recipes/recipes_list.html:27
+#: templates/recipes/recipes_list.html:47
 msgid "First"
 msgstr "Pierwszy"
 
-#: templates/recipes/recipes_list.html:41
+#: templates/recipes/recipes_list.html:61
 msgid "Last"
 msgstr "Ostatni"
 

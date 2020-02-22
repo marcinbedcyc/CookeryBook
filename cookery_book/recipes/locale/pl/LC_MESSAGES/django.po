@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-21 15:35+0100\n"
+"POT-Creation-Date: 2020-02-22 11:35+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,58 +20,62 @@ msgstr ""
 "%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
 "%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
-#: models.py:18
+#: recipes/models.py:19
 msgid "Soup"
 msgstr "Zupa"
 
-#: models.py:19
+#: recipes/models.py:20
 msgid "Dessert"
 msgstr "Deser"
 
-#: models.py:20
+#: recipes/models.py:21
 msgid "Snack"
 msgstr "Przekąska"
 
-#: models.py:21
+#: recipes/models.py:22
 msgid "Main Course"
 msgstr "Danie Główne"
 
-#: models.py:22
+#: recipes/models.py:23
 msgid "Appetizer"
 msgstr "Przystawka"
 
-#: models.py:23
+#: recipes/models.py:24
 msgid "Drink"
 msgstr "Napój"
 
-#: models.py:24
+#: recipes/models.py:25
 msgid "Breakfast"
 msgstr "Śniadanie"
 
-#: models.py:25
+#: recipes/models.py:26
 msgid "Preserves"
 msgstr "Przetwory"
 
-#: models.py:26
+#: recipes/models.py:27
 msgid "Salads"
 msgstr "Sałatka"
 
-#: models.py:54
+#: recipes/models.py:68 recipes/models.py:81
 msgid "Glass"
 msgstr "Szklanka"
 
-#: models.py:55
+#: recipes/models.py:69 recipes/models.py:82
 msgid "Cup"
 msgstr "Filiżanka"
 
-#: models.py:56
+#: recipes/models.py:70 recipes/models.py:83
 msgid "Pinch"
 msgstr "Szczypta"
 
-#: models.py:57
+#: recipes/models.py:71 recipes/models.py:84
 msgid "Teaspoon"
 msgstr "Łyżeczka"
 
-#: models.py:58
+#: recipes/models.py:72 recipes/models.py:85
 msgid "Spoon"
 msgstr "Łyżka"
+
+#: recipes/models.py:73 recipes/models.py:86
+msgid "Pieces"
+msgstr "Sztuki"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-22 11:35+0100\n"
+"POT-Creation-Date: 2020-02-24 12:12+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,32 +31,34 @@ msgid "Cookery Book"
 msgstr "Przepisy Kulinarne Online"
 
 #: templates/base.html:29
-msgid "Home"
-msgstr "Strona Główna"
-
-#: templates/base.html:30
 msgid "About"
 msgstr "O nas"
 
-#: templates/base.html:34
+#: templates/base.html:33
 msgid "New Recipe"
 msgstr "Nowy Przepis"
 
-#: templates/base.html:35
+#: templates/base.html:34
 msgid "Profile"
 msgstr "Profil"
 
-#: templates/base.html:36
+#: templates/base.html:35
 msgid "Logout"
 msgstr "Wyloguj"
 
-#: templates/base.html:38 templates/users/login.html:11
+#: templates/base.html:37 templates/users/login.html:11
 msgid "Login"
 msgstr "Zaloguj"
 
-#: templates/base.html:39
+#: templates/base.html:38
 msgid "Register"
 msgstr "Zarejestruj"
+
+#: templates/base.html:67
+#, fuzzy
+#| msgid "New Recipe"
+msgid "All Recipes"
+msgstr "Wszystkie Przepisy"
 
 #: templates/base.html:68 templates/recipes/recipe_detail.html:42
 #: templates/recipes/recipes_list.html:17
@@ -116,15 +118,15 @@ msgid "Category"
 msgstr "Kategoria"
 
 #: templates/recipes/recipe_detail.html:62
-msgid "Short Description: "
+msgid "Short Description"
 msgstr "Krótki opis"
 
 #: templates/recipes/recipe_detail.html:64
-msgid "Ingredients: "
+msgid "Ingredients"
 msgstr "Składniki"
 
 #: templates/recipes/recipe_detail.html:70
-msgid "Instructions: "
+msgid "Instructions"
 msgstr "Instrukcje"
 
 #: templates/recipes/recipes_list.html:38
@@ -186,3 +188,6 @@ msgstr "Zaloguj się"
 #: templates/users/users_base.html:40
 msgid "Choose Language: "
 msgstr "Wybierz język:"
+
+#~ msgid "Home"
+#~ msgstr "Strona Główna"

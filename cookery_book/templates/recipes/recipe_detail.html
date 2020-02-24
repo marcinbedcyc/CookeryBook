@@ -8,7 +8,7 @@
         <a href="#"> {{recipe.author}}</a>
         <medium > {% trans "on" %} {{ recipe.created_date|date:"d-m-Y H:i" }}</medium>
     </div>
-    <div id="carouselExampleIndicators" class="carousel slide col-lg-8 offset-lg-2" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide col-lg-10 offset-lg-1" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             {% for image in images  %}
@@ -39,36 +39,36 @@
     <div class="text-left">
         <h4 >{% trans "Category" %}:
         {% if  recipe.dish_kind == "Soup"%}
-            <a href="#" class="text-muted">{% trans "Soup" %}</a>
+            <a href="{% url 'soups-list' %}" class="text-muted">{% trans "Soup" %}</a>
         {% elif recipe.dish_kind == "Dessert" %}
-            <a href="#" class="text-muted">{% trans "Dessert" %}</a>
+            <a href="{% url 'desserts-list' %}" class="text-muted">{% trans "Dessert" %}</a>
         {% elif recipe.dish_kind == "Snack" %}
-            <a href="#" class="text-muted" >{% trans "Snack" %}</a>
+            <a href="{% url 'snacks-list' %}" class="text-muted" >{% trans "Snack" %}</a>
         {% elif recipe.dish_kind == "Main Course" %}
-            <a href="#" class="text-muted">{% trans "Main Course" %}</a>
+            <a href="{% url 'main-courses-list' %}" class="text-muted">{% trans "Main Course" %}</a>
         {% elif recipe.dish_kind == "Appetizer" %}
-            <a href="#" class="text-muted">{% trans "Appetizer" %}</a>
+            <a href="{% url 'appetizers-list' %}" class="text-muted">{% trans "Appetizer" %}</a>
         {% elif recipe.dish_kind == "Drink" %}
-            <a href="#" class="text-muted">{% trans "Drink" %}</a>
+            <a href="{% url 'drinks-list' %}" class="text-muted">{% trans "Drink" %}</a>
         {% elif recipe.dish_kind == "Breakfast" %}
-            <a href="#" class="text-muted">{% trans "Breakfast" %}</a>
+            <a href="{% url 'breakfast-list' %}" class="text-muted">{% trans "Breakfast" %}</a>
         {% elif recipe.dish_kind == "Preserves" %}
-            <a href="#" lass="text-muted">{% trans "Preserves" %}</a>
+            <a href="{% url 'preserves-list' %}" lass="text-muted">{% trans "Preserves" %}</a>
         {% elif recipe.dish_kind == "Salads" %}
-            <a href="#" class="text-muted">{% trans "Salads" %}</a>
+            <a href="{% url 'salads-list' %}" class="text-muted">{% trans "Salads" %}</a>
         {% endif %}
         </h4>
     </div>
-    <h1 class="text-left" style='font-family: "Playfair Display", Georgia, "Times New Roman", serif;'>{% trans "Short Description: " %}</h1>
+    <h1 class="text-left" style='font-family: "Playfair Display", Georgia, "Times New Roman", serif;'>{% trans "Short Description" %}: </h1>
     <p class="lead text-left ml-5">{{recipe.short_description}}</p>
-    <h1 class="text-left  mt-5" style='font-family: "Playfair Display", Georgia, "Times New Roman", serif;'>{% trans "Ingredients: " %}</h1>
+    <h1 class="text-left  mt-5" style='font-family: "Playfair Display", Georgia, "Times New Roman", serif;'>{% trans "Ingredients" %}: </h1>
     <ul class="text-left ml-5">
     {% for ingredient in ingredients  %}
     <li>{{ingredient}}</li>
     {% endfor %}
     </ul>
-    <h1 class="text-left" style='font-family: "Playfair Display", Georgia, "Times New Roman", serif;'>{% trans "Instructions: " %}</h1>
-    <p class="lead text-left ml-5">{{recipe.instructions}}</p>
+    <h1 class="text-left" style='font-family: "Playfair Display", Georgia, "Times New Roman", serif;'>{% trans "Instructions" %}: </h1>
+    <p class="lead text-justify ml-5 mr-5">{{recipe.instructions}}</p>
     </div>
 </main>
 {% endblock %}

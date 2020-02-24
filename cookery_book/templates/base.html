@@ -26,7 +26,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarToggle">
           <div class="navbar-nav mr-auto">
-            <strong><a class="nav-item nav-link" href={% url 'recipes-list' %}>{% trans "Home" %}</a></strong>
             <strong><a class="nav-item nav-link"  href={% url 'recipes-list' %}>{% trans "About" %}</a></strong>
           </div>
           <div class="navbar-nav">
@@ -65,15 +64,16 @@
       <hr>
       <div class="nav-scroller py-1 mb-2">
         <nav class="nav d-flex justify-content-between">
-          <a class="p-2 text-muted" style='font-family: "Playfair Display", Georgia, "Times New Roman", serif;' href="#">{% trans "Soup" %}</a>
-          <a class="p-2 text-muted" href="#">{% trans "Dessert" %}</a>
-          <a class="p-2 text-muted" href="#">{% trans "Snack" %}</a>
-          <a class="p-2 text-muted" href="#">{% trans "Main Course" %}</a>
-          <a class="p-2 text-muted" href="#">{% trans "Appetizer" %}</a>
-          <a class="p-2 text-muted" href="#">{% trans "Drink" %}</a>
-          <a class="p-2 text-muted" href="#">{% trans "Breakfast" %}</a>
-          <a class="p-2 text-muted" href="#">{% trans "Preserves" %}</a>
-          <a class="p-2 text-muted" href="#">{% trans "Salads" %}</a>
+          <a class="p-2 text-muted" href="{% url 'recipes-list' %}">{% trans "All Recipes" %}</a>
+          <a class="p-2 text-muted" href="{% url 'soups-list' %}">{% trans "Soup" %}</a>
+          <a class="p-2 text-muted" href="{% url 'desserts-list' %}">{% trans "Dessert" %}</a>
+          <a class="p-2 text-muted" href="{% url 'snacks-list' %}">{% trans "Snack" %}</a>
+          <a class="p-2 text-muted" href="{% url 'main-courses-list' %}">{% trans "Main Course" %}</a>
+          <a class="p-2 text-muted" href="{% url 'appetizers-list' %}">{% trans "Appetizer" %}</a>
+          <a class="p-2 text-muted" href="{% url 'drinks-list' %}">{% trans "Drink" %}</a>
+          <a class="p-2 text-muted" href="{% url 'breakfast-list' %}">{% trans "Breakfast" %}</a>
+          <a class="p-2 text-muted" href="{% url 'preserves-list' %}">{% trans "Preserves" %}</a>
+          <a class="p-2 text-muted" href="{% url 'salads-list' %}">{% trans "Salads" %}</a>
         </nav>
       </div>
       <hr class="mb-4">

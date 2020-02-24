@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-24 12:12+0100\n"
+"POT-Creation-Date: 2020-02-24 17:32+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -154,20 +154,56 @@ msgid "Log In"
 msgstr "Zaloguj"
 
 #: templates/users/login.html:14
-msgid "Need An Account"
-msgstr "Potrzebujesz konta"
+msgid "Forgot password?"
+msgstr "Zapomniałeś hasła?"
 
-#: templates/users/login.html:14
+#: templates/users/login.html:19
+msgid "Need An Account?"
+msgstr "Potrzebujesz konta?"
+
+#: templates/users/login.html:19
 msgid "Sign In Now"
 msgstr "Zarejestruj się teraz"
 
-#: templates/users/logout.html:5
+#: templates/users/logout.html:6
 msgid "You have been logged out"
 msgstr "Zostałeś wylogowany"
 
-#: templates/users/logout.html:8
+#: templates/users/logout.html:9
 msgid "Login in again?"
 msgstr "Zaloguj jeszcze raz?"
+
+#: templates/users/password_reset.html:9
+#: templates/users/password_reset_confirm.html:9
+#: templates/users/password_reset_confirm.html:13
+msgid "Reset Password"
+msgstr "Zresetuj hasło"
+
+#: templates/users/password_reset.html:13
+msgid "Request Password Reset"
+msgstr "Zresetuj hasło"
+
+#: templates/users/password_reset_complete.html:8
+msgid "Your password has been changed!"
+msgstr "Twoje hasło zostało zmienione"
+
+#: templates/users/password_reset_complete.html:13
+msgid "Password changed!"
+msgstr "Hasło zmienione!"
+
+#: templates/users/password_reset_complete.html:14
+#, fuzzy
+#| msgid "Sign In"
+msgid "Sign In Here"
+msgstr "Zaloguj się"
+
+#: templates/users/password_reset_done.html:8
+msgid "An e-mail has been send with instructions to reset your password"
+msgstr "E-mail z instrukcjami resetowania hasła został wysłany"
+
+#: templates/users/password_reset_done.html:13
+msgid "An e-mail has been send!"
+msgstr "E-mail został wysłany!"
 
 #: templates/users/register.html:8
 msgid "Join Today"
